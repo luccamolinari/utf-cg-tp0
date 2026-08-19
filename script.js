@@ -2,6 +2,8 @@ const botaosom = document.getElementById('btn-som');
 const containerplayer = document.querySelector('.player-container');
 const player = document.getElementById('player');
 const nomemusica = document.getElementById('nome-musica');
+const btnplay = document.getElementById('btn-play');
+const barraprogresso = document.getElementById('barra-progresso');
 
 const musicas = [
   { nome: 'the beatles - something', arquivo: 'anexos/something.mp3' },
@@ -17,4 +19,20 @@ botaosom.addEventListener('click', () => {
   player.src = musica.arquivo;
   containerplayer.style.display = 'block';
   player.play();
+  btnplay.innerText = 'pause';
+});
+
+btnplay.addEventListener('click', () => {
+  if (player.paused) {
+    player.play();
+    btnplay.innerText = 'pause';
+  } else {
+    player.pause();
+    btnplay.innerText = 'play';
+  }
+});
+
+player.addEventListener('timeupdate', () => {
+  const progresso = (player.currentTime / player.duration) * 100;
+  barraprogresso.style.width = progresso + '%';
 });

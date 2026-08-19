@@ -19,7 +19,7 @@
       <main>
         <section class="sobre">
           <div class="perfil">
-            <img src="anexos/eu.jpg" alt="eu" class="foto-bruta">
+            <img src="anexos/eu.jpeg" alt="eu" class="foto-bruta">
             <div>
               <h2>quem sou eu</h2>
               <p>tenho 21 anos. nasci em ponte nova, interior de minas gerais.<br>
@@ -30,13 +30,39 @@
           <img src="anexos/kyra.jpg" alt="kyra" class="foto-bruta kyra-foto">
         </section>
 
+        <section class="fatos">
+          <h2>fatos aleatórios</h2>
+          <div class="grid-cards">
+            <div class="card">
+              <img src="anexos/pedro_calais.jpeg" alt="pedro calais">
+              <p>treino com o pedro calais, vocalista da banda lagum.</p>
+            </div>
+            <div class="card">
+              <img src="anexos/piano.jpeg" alt="piano">
+              <p>toco piano desde pequeno.</p>
+            </div>
+            <div class="card">
+              <img src="anexos/filme.jpeg" alt="antes do amanhecer">
+              <p>meu filme favorito é antes do amanhecer.</p>
+            </div>
+          </div>
+        </section>
+
         <section class="som">
           <h2>curte um som?</h2>
           <button id="btn-som">sortear música</button>
+          
           <div class="player-container">
             <h3 id="nome-musica"></h3>
-            <audio id="player" controls></audio>
+            <div class="player-custom">
+              <button id="btn-play">play</button>
+              <div class="trilha">
+                <div id="barra-progresso"></div>
+              </div>
+            </div>
+            <audio id="player"></audio>
           </div>
+          
         </section>
       </main>
     </div>
