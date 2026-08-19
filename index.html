@@ -1,28 +1,45 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>site do lucca</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=anton&family=roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <main class="container">
-      <aside class="coluna-nome">
+    <div class="container">
+      <header>
         <h1>lucca</h1>
-      </aside>
-      <section class="conteudo">
-        <h2>oi, eu sou o lucca</h2>
-        <img src="anexos/eu.jpg" alt="eu" class="foto-polaroid polaroid-1">
-        <p>tenho 21 anos. nasci em ponte nova, interior de minas gerais.<br>
-           gosto muito de musculação, música boa, bons livros e bons filmes.<br>
-           toco piano, faço jiu-jitsu, e essa aí embaixo é minha filhota kyra.
-        </p>
-        <img src="anexos/kyra.jpg" alt="minha filhota" class="foto-polaroid polaroid-2">
-      </section>
-    </main>
+        <div class="linha-vermelha"></div>
+      </header>
+      
+      <main>
+        <section class="sobre">
+          <div class="perfil">
+            <img src="anexos/eu.jpg" alt="eu" class="foto-bruta">
+            <div>
+              <h2>quem sou eu</h2>
+              <p>tenho 21 anos. nasci em ponte nova, interior de minas gerais.<br>
+              gosto muito de musculação, música boa, bons livros e bons filmes.<br>
+              toco piano, faço jiu-jitsu, e essa aí embaixo é minha filhota kyra.</p>
+            </div>
+          </div>
+          <img src="anexos/kyra.jpg" alt="kyra" class="foto-bruta kyra-foto">
+        </section>
+
+        <section class="som">
+          <h2>curte um som?</h2>
+          <button id="btn-som">sortear música</button>
+          <div class="player-container">
+            <h3 id="nome-musica"></h3>
+            <audio id="player" controls></audio>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

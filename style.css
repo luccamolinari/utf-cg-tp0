@@ -1,9 +1,9 @@
 :root {
-  --fundo: #e8e0cc;
-  --oliva: #4a5d3a;
-  --marrom-texto: #3e2e23;
-  --mostarda: #c08a3e;
-  --marrom-escuro: #2b211a;
+  --fundo: #0a0a0a;
+  --fundo-card: #141414;
+  --texto: #d1d1d1;
+  --vermelho: #990000;
+  --vermelho-hover: #ff1a1a;
 }
 
 * {
@@ -14,108 +14,122 @@
 
 body {
   background-color: var(--fundo);
-  color: var(--marrom-texto);
-  font-family: 'work sans', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
+  color: var(--texto);
+  font-family: 'roboto', sans-serif;
+  line-height: 1.6;
 }
 
 .container {
-  display: flex;
-  max-width: 900px;
-  width: 100%;
-  gap: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.coluna-nome {
-  display: flex;
-  align-items: center;
-  border-right: 4px solid var(--oliva);
-  padding-right: 30px;
-}
-
-.coluna-nome h1 {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-family: 'roboto slab', serif;
+header h1 {
+  font-family: 'anton', sans-serif;
   font-size: 5rem;
-  color: var(--oliva);
-  letter-spacing: 8px;
+  letter-spacing: 5px;
+  color: #fff;
 }
 
-.conteudo {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.linha-vermelha {
+  height: 4px;
+  width: 100px;
+  background-color: var(--vermelho);
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
-.conteudo h2 {
-  font-family: 'roboto slab', serif;
-  color: var(--marrom-escuro);
+h2 {
+  font-family: 'anton', sans-serif;
   font-size: 2.5rem;
-  border-bottom: 3px solid var(--mostarda);
-  display: inline-block;
-  padding-bottom: 5px;
-  align-self: flex-start;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-.conteudo p {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  max-width: 600px;
-  border-left: 3px solid var(--mostarda);
-  padding-left: 15px;
+.perfil {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-left: 4px solid var(--vermelho);
 }
 
-.foto-polaroid {
-  background: #fff;
-  padding: 10px 10px 40px 10px;
-  box-shadow: 2px 4px 15px rgba(43, 33, 26, 0.2);
+.perfil p {
+  font-size: 1.1rem;
+}
+
+.foto-bruta {
   max-width: 250px;
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+  border: 2px solid #333;
+  transition: all 0.4s ease;
 }
 
-.polaroid-1 {
-  transform: rotate(-3deg);
-  align-self: flex-start;
+.foto-bruta:hover {
+  filter: grayscale(0%);
+  border-color: var(--vermelho);
 }
 
-.polaroid-2 {
-  transform: rotate(4deg);
-  align-self: flex-end;
+.kyra-foto {
+  max-width: 350px;
+  display: block;
+  margin: 0 auto 60px auto;
 }
 
-.foto-polaroid:hover {
-  transform: rotate(0deg) scale(1.05);
-  z-index: 10;
+.som {
+  background-color: var(--fundo-card);
+  padding: 40px 30px;
+  border: 1px solid #222;
+  text-align: center;
+}
+
+button {
+  background-color: transparent;
+  color: var(--texto);
+  font-family: 'anton', sans-serif;
+  font-size: 1.5rem;
+  padding: 12px 35px;
+  border: 2px solid var(--vermelho);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  text-transform: lowercase;
+}
+
+button:hover {
+  background-color: var(--vermelho);
+  color: #fff;
+}
+
+.player-container {
+  display: none;
+  margin-top: 20px;
+}
+
+#nome-musica {
+  font-family: 'anton', sans-serif;
+  color: var(--vermelho);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+audio {
+  width: 100%;
+  height: 40px;
+  outline: none;
 }
 
 @media (max-width: 768px) {
-  .container {
+  .perfil {
     flex-direction: column;
-    gap: 20px;
-  }
-  
-  .coluna-nome {
-    border-right: none;
-    border-bottom: 4px solid var(--oliva);
-    padding-right: 0;
-    padding-bottom: 15px;
-    justify-content: center;
-  }
-  
-  .coluna-nome h1 {
-    writing-mode: horizontal-tb;
-    transform: none;
-    font-size: 3.5rem;
-  }
-  
-  .polaroid-2 {
-    align-self: center;
+    text-align: center;
+    border-left: none;
+    border-top: 4px solid var(--vermelho);
   }
 }
