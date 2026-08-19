@@ -75,10 +75,19 @@ h2 {
   border-color: var(--vermelho);
 }
 
+.area-misteriosa {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
 .kyra-foto {
   max-width: 350px;
   display: block;
-  margin: 0 auto 60px auto;
+  margin: 0 auto;
+}
+
+.escondido {
+  display: none !important;
 }
 
 .fatos {
@@ -242,4 +251,12 @@ audio {
     border-left: none;
     border-top: 4px solid var(--vermelho);
   }
+}
+
+.legenda-kyra {
+  font-family: 'anton', sans-serif;
+  color: var(--vermelho);
+  font-size: 1.5rem;
+  margin-top: 15px;
+  letter-spacing: 2px;
 }

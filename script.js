@@ -6,6 +6,14 @@ const btnplay = document.getElementById('btn-play');
 const barraprogresso = document.getElementById('barra-progresso');
 const disco = document.getElementById('disco');
 
+const btnmisterioso = document.getElementById('btn-misterioso');
+const fotokyra = document.getElementById('foto-kyra');
+
+btnmisterioso.addEventListener('click', () => {
+  fotokyra.classList.remove('escondido');
+  btnmisterioso.style.display = 'none';
+});
+
 const musicas = [
   { nome: 'the beatles - something', arquivo: 'anexos/something.mp3' },
   { nome: 'pearl jam - yellow ledbetter', arquivo: 'anexos/yellow_ledbetter.mp3' },
